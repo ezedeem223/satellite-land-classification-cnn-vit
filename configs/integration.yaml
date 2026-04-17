@@ -1,0 +1,25 @@
+evaluation:
+  output_dir: results
+  metrics_json: results/metrics.json
+  comparison_csv: results/model_comparison.csv
+  classification_report_txt: results/classification_report.txt
+  confusion_matrix_dir: results/preserved_notebook_outputs/confusion_matrices
+  roc_dir: results/preserved_notebook_outputs/roc_curves
+  models:
+    - name: keras_cnn
+      type: keras_cnn
+      path: models/keras_cnn_best.keras
+    - name: pytorch_cnn
+      type: pytorch_cnn
+      path: models/pytorch_cnn_best.pth
+      num_classes: 2
+    - name: keras_cnn_vit
+      type: keras_vit
+      path: models/keras_cnn_vit_best.keras
+    - name: pytorch_cnn_vit
+      type: pytorch_vit
+      path: models/pytorch_cnn_vit_best.pth
+      depth: 3
+      attention_heads: 6
+      embed_dim: 768
+

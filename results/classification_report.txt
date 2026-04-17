@@ -1,0 +1,49 @@
+Historical notebook classification reports
+
+[Module 2] Keras CNN
+accuracy: 0.9925 | ROC-AUC: 1.0000 | loss: 0.0247
+
+                precision    recall  f1-score   support
+
+    non-agri     0.9852    1.0000    0.9926      3000
+        agri     1.0000    0.9850    0.9924      3000
+
+    accuracy                         0.9925      6000
+   macro avg     0.9926    0.9925    0.9925      6000
+weighted avg     0.9926    0.9925    0.9925      6000
+
+[Module 2] PyTorch CNN
+accuracy: 0.9988 | ROC-AUC: 1.0000 | loss: 0.0024
+
+                precision    recall  f1-score   support
+
+    non-agri     0.9993    0.9983    0.9988      3000
+        agri     0.9983    0.9993    0.9988      3000
+
+    accuracy                         0.9988      6000
+   macro avg     0.9988    0.9988    0.9988      6000
+weighted avg     0.9988    0.9988    0.9988      6000
+
+[Module 4] Keras CNN-ViT Hybrid
+accuracy: 0.9958 | ROC-AUC: 0.9998 | loss: 0.0530
+
+                precision    recall  f1-score   support
+
+    non-agri     0.9927    0.9990    0.9958      3000
+        agri     0.9990    0.9927    0.9958      3000
+
+    accuracy                         0.9958      6000
+   macro avg     0.9959    0.9958    0.9958      6000
+weighted avg     0.9959    0.9958    0.9958      6000
+
+[Module 4] PyTorch CNN-ViT Hybrid
+accuracy: 0.9990 | ROC-AUC: 1.0000 | loss: 0.0047
+
+                precision    recall  f1-score   support
+
+    non-agri     0.9990    0.9990    0.9990      3000
+        agri     0.9990    0.9990    0.9990      3000
+
+    accuracy                         0.9990      6000
+   macro avg     0.9990    0.9990    0.9990      6000
+weighted avg     0.9990    0.9990    0.9990      6000

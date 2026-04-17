@@ -1,0 +1,209 @@
+{
+  "historical_notebook_metrics": {
+    "module2_cnn_comparison": {
+      "source_notebook": "Lab_M2L3_Comparative_Analysis_of_Keras_and_PyTorch_Models (1).ipynb",
+      "keras_cnn": {
+        "accuracy": 0.9925,
+        "precision": 1.0,
+        "recall": 0.985,
+        "f1_score": 0.9924,
+        "roc_auc": 1.0,
+        "loss": 0.0247,
+        "source_cell": 47
+      },
+      "pytorch_cnn": {
+        "accuracy": 0.9988,
+        "precision": 0.9983,
+        "recall": 0.9993,
+        "f1_score": 0.9988,
+        "roc_auc": 1.0,
+        "loss": 0.0024,
+        "source_cell": 57
+      }
+    },
+    "module4_hybrid_comparison": {
+      "source_notebook": "lab_M4L1_Land_Classification_CNN-ViT_Integration_Evaluation.ipynb",
+      "keras_cnn_vit": {
+        "accuracy": 0.9958,
+        "precision": 0.999,
+        "recall": 0.9927,
+        "f1_score": 0.9958,
+        "roc_auc": 0.9998,
+        "loss": 0.053,
+        "source_cell": 56
+      },
+      "pytorch_cnn_vit": {
+        "accuracy": 0.999,
+        "precision": 0.999,
+        "recall": 0.999,
+        "f1_score": 0.999,
+        "roc_auc": 1.0,
+        "loss": 0.0047,
+        "source_cell": 60
+      }
+    },
+    "training_snapshots": {
+      "module2_keras_cnn": {
+        "source_notebook": "Lab_M2L1_Train_and_Evaluate_a_Keras-Based_Classifier.ipynb",
+        "epochs": [
+          {
+            "epoch": 1,
+            "train_accuracy": 0.9058,
+            "train_loss": 0.2147,
+            "val_accuracy": 0.51,
+            "val_loss": 2.6904
+          },
+          {
+            "epoch": 2,
+            "train_accuracy": 0.9742,
+            "train_loss": 0.0766,
+            "val_accuracy": 0.5558,
+            "val_loss": 1.9127
+          },
+          {
+            "epoch": 3,
+            "train_accuracy": 0.9815,
+            "train_loss": 0.0545,
+            "val_accuracy": 0.52,
+            "val_loss": 2.8527
+          }
+        ],
+        "validation_accuracy": 0.5233,
+        "source_cell": 83
+      },
+      "module2_pytorch_cnn": {
+        "source_notebook": "Lab_M2L2_Implement_and_Test_a_PyTorch-Based_Classifier (2).ipynb",
+        "epochs": [
+          {
+            "epoch": 1,
+            "train_accuracy": 0.9371,
+            "train_loss": 0.2512,
+            "val_accuracy": 0.9775,
+            "val_loss": 0.0494
+          },
+          {
+            "epoch": 2,
+            "train_accuracy": 0.994,
+            "train_loss": 0.017,
+            "val_accuracy": 0.9975,
+            "val_loss": 0.0094
+          },
+          {
+            "epoch": 3,
+            "train_accuracy": 0.9892,
+            "train_loss": 0.0365,
+            "val_accuracy": 0.9842,
+            "val_loss": 0.0481
+          }
+        ],
+        "validation_accuracy": 0.9842,
+        "source_cell": 95
+      },
+      "module3_keras_cnn_vit": {
+        "source_notebook": "Lab_M3L1_Vision_Transformers_in_Keras.ipynb",
+        "epochs": [
+          {
+            "epoch": 1,
+            "train_accuracy": 0.9883,
+            "train_loss": 0.21,
+            "val_accuracy": 0.9892,
+            "val_loss": 0.0776
+          },
+          {
+            "epoch": 2,
+            "train_accuracy": 0.9902,
+            "train_loss": 0.121,
+            "val_accuracy": 0.9942,
+            "val_loss": 0.0533
+          },
+          {
+            "epoch": 3,
+            "train_accuracy": 0.9961,
+            "train_loss": 0.0486,
+            "val_accuracy": 0.9817,
+            "val_loss": 0.1002
+          }
+        ],
+        "source_cell": 53
+      },
+      "module3_pytorch_cnn_vit": {
+        "source_notebook": "Lab_M3L2_Vision_Transformers_in_PyTorch.ipynb",
+        "epochs": [
+          {
+            "epoch": 1,
+            "train_accuracy": 0.9354,
+            "train_loss": 0.3249,
+            "val_accuracy": 0.9858,
+            "val_loss": 0.0399
+          },
+          {
+            "epoch": 2,
+            "train_accuracy": 0.9565,
+            "train_loss": 0.1452,
+            "val_accuracy": 0.99,
+            "val_loss": 0.0443
+          },
+          {
+            "epoch": 3,
+            "train_accuracy": 0.9817,
+            "train_loss": 0.0567,
+            "val_accuracy": 0.9917,
+            "val_loss": 0.0296
+          },
+          {
+            "epoch": 4,
+            "train_accuracy": 0.9815,
+            "train_loss": 0.0634,
+            "val_accuracy": 0.9925,
+            "val_loss": 0.0251
+          },
+          {
+            "epoch": 5,
+            "train_accuracy": 0.9862,
+            "train_loss": 0.0473,
+            "val_accuracy": 0.9925,
+            "val_loss": 0.0272
+          }
+        ],
+        "deeper_test_variant": [
+          {
+            "epoch": 1,
+            "train_accuracy": 0.7681,
+            "train_loss": 0.6457,
+            "val_accuracy": 0.4992,
+            "val_loss": 0.9057
+          },
+          {
+            "epoch": 2,
+            "train_accuracy": 0.8458,
+            "train_loss": 0.3861,
+            "val_accuracy": 0.93,
+            "val_loss": 0.2636
+          },
+          {
+            "epoch": 3,
+            "train_accuracy": 0.8877,
+            "train_loss": 0.2798,
+            "val_accuracy": 0.54,
+            "val_loss": 0.6979
+          },
+          {
+            "epoch": 4,
+            "train_accuracy": 0.6335,
+            "train_loss": 0.6673,
+            "val_accuracy": 0.72,
+            "val_loss": 0.5839
+          },
+          {
+            "epoch": 5,
+            "train_accuracy": 0.7102,
+            "train_loss": 0.6064,
+            "val_accuracy": 0.7292,
+            "val_loss": 0.5774
+          }
+        ],
+        "source_cell": 56
+      }
+    }
+  }
+}

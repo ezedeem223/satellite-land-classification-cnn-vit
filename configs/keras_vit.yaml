@@ -1,0 +1,19 @@
+model:
+  name: keras_cnn_vit
+  framework: keras
+  architecture: cnn_vit_hybrid
+  output_path: models/keras_cnn_vit_best.keras
+  pretrained_cnn_path: models/keras_cnn_best.keras
+  feature_layer_name: batch_normalization_5
+  history_path: results/keras_cnn_vit_history.json
+training:
+  batch_size: 4
+  learning_rate: 0.0001
+  epochs: 3
+  steps_per_epoch: 128
+  num_transformer_layers: 4
+  attention_heads: 8
+  mlp_dim: 2048
+  checkpoint_monitor: val_loss
+  checkpoint_mode: min
+

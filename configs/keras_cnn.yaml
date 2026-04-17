@@ -1,0 +1,15 @@
+model:
+  name: keras_cnn
+  framework: keras
+  architecture: cnn
+  output_path: models/keras_cnn_best.keras
+  history_path: results/keras_cnn_history.json
+training:
+  batch_size: 128
+  learning_rate: 0.001
+  epochs: 3
+  steps_per_epoch: null
+  validation_steps: null
+  checkpoint_monitor: val_accuracy
+  checkpoint_mode: max
+

@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.local
+
+# Dataset payloads
+data/*
+!data/README.md
+
+# Model checkpoints and weights
+models/*
+!models/README.md
+!models/.gitkeep
+*.keras
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Large archives and generated assets
+*.tar
+*.tar.gz
+*.zip
+

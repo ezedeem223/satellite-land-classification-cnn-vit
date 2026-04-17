@@ -1,0 +1,5 @@
+model,family,framework,accuracy,precision,recall,f1_score,roc_auc,source_notebook
+keras_cnn,cnn,keras,0.9925,1.0,0.985,0.9924,1.0,Lab_M2L3_Comparative_Analysis_of_Keras_and_PyTorch_Models (1).ipynb
+pytorch_cnn,cnn,pytorch,0.9988,0.9983,0.9993,0.9988,1.0,Lab_M2L3_Comparative_Analysis_of_Keras_and_PyTorch_Models (1).ipynb
+keras_cnn_vit,cnn_vit_hybrid,keras,0.9958,0.999,0.9927,0.9958,0.9998,lab_M4L1_Land_Classification_CNN-ViT_Integration_Evaluation.ipynb
+pytorch_cnn_vit,cnn_vit_hybrid,pytorch,0.999,0.999,0.999,0.999,1.0,lab_M4L1_Land_Classification_CNN-ViT_Integration_Evaluation.ipynb

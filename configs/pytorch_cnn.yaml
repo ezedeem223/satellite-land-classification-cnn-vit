@@ -1,0 +1,14 @@
+model:
+  name: pytorch_cnn
+  framework: pytorch
+  architecture: cnn
+  output_path: models/pytorch_cnn_best.pth
+  history_path: results/pytorch_cnn_history.json
+training:
+  batch_size: 128
+  learning_rate: 0.001
+  epochs: 3
+  num_workers: 0
+  checkpoint_monitor: val_loss
+  checkpoint_mode: min
+

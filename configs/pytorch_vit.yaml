@@ -1,0 +1,18 @@
+model:
+  name: pytorch_cnn_vit
+  framework: pytorch
+  architecture: cnn_vit_hybrid
+  output_path: models/pytorch_cnn_vit_best.pth
+  pretrained_cnn_path: models/pytorch_cnn_best.pth
+  history_path: results/pytorch_cnn_vit_history.json
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 5
+  num_workers: 0
+  depth: 3
+  attention_heads: 6
+  embed_dim: 768
+  checkpoint_monitor: val_loss
+  checkpoint_mode: min
+

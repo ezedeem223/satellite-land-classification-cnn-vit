@@ -1,0 +1,19 @@
+dataset:
+  name: images_dataSAT
+  url: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/4Z1fwRR295-1O3PMQBH6Dg/images-dataSAT.tar
+  root_dir: data
+  extracted_dir: data/images_dataSAT
+  archive_name: images-dataSAT.tar
+  class_names:
+    - class_0_non_agri
+    - class_1_agri
+  label_names:
+    - non-agri
+    - agri
+  image_size:
+    - 64
+    - 64
+  channels: 3
+  seed: 7331
+  validation_split: 0.2
+
