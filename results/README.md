@@ -2,20 +2,20 @@
 
 This folder mixes three artifact types, and the distinction matters:
 
-1. Historical notebook outputs extracted from the uploaded notebooks
+1. Historical notebook outputs extracted from the archived development notebooks
 2. Structured summaries derived from those notebook outputs
 3. Placeholder locations for future reruns from the refactored scripts
 
 Included now:
 
 - `metrics.json`
-  Historical metrics extracted from Module 2, Module 3, and Module 4 notebook outputs
+  Historical metrics extracted from the archived CNN comparison, hybrid training, and final evaluation notebooks
 - `model_comparison.csv`
   Comparison table built only from notebook-supported metrics
 - `classification_report.txt`
-  Preserved classification reports for the Module 2 and Module 4 comparison/evaluation notebooks
+  Preserved classification reports for the baseline comparison and final hybrid evaluation notebooks
 - `confusion_matrix.png`
-  Historical confusion matrix copied from the Module 4 PyTorch CNN-ViT evaluation output
+  Historical confusion matrix copied from the final PyTorch CNN-ViT evaluation output
 - `preserved_notebook_outputs/`
   Extracted figures from notebook output cells, including confusion matrices, ROC curves, and training curves
 - `sample_visualizations/`
@@ -27,5 +27,4 @@ Not included yet:
 - Fresh benchmark reruns from this workspace
 - Newly trained checkpoints
 
-Those missing artifacts are intentional. The notebooks provide real historical outputs, but the dataset and model binaries are not committed here, so fresh reruns depend on local setup.
-
+Those missing artifacts are intentional. The repository preserves real historical outputs, but the dataset and model binaries are not committed here, so fresh reruns depend on local setup.

@@ -5,14 +5,31 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "satellite-land-classification-cnn-vit"
 version = "0.1.0"
-description = "Satellite agricultural land classification using CNNs and Vision Transformers."
+description = "Independent satellite land classification project using CNN and CNN-ViT models."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [
-  { name = "OpenAI Codex Refactor" }
+  { name = "ezedeem223" }
 ]
-dependencies = []
+maintainers = [
+  { name = "ezedeem223" }
+]
+dependencies = [
+  "numpy>=1.26,<2.2",
+  "matplotlib>=3.9,<3.11",
+  "pillow>=10.0,<12.0",
+  "pyyaml>=6.0,<7.0",
+  "scikit-learn>=1.7,<1.8",
+  "tensorflow>=2.19,<2.20",
+  "torch>=2.8,<2.9",
+  "torchvision>=0.23,<0.24",
+  "tqdm>=4.66,<5.0",
+]
+
+[project.urls]
+Repository = "https://github.com/ezedeem223/satellite-land-classification-cnn-vit"
+Issues = "https://github.com/ezedeem223/satellite-land-classification-cnn-vit/issues"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
