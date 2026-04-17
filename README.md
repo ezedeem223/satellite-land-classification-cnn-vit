@@ -2,11 +2,11 @@
 
 [![CI](https://github.com/ezedeem223/satellite-land-classification-cnn-vit/actions/workflows/ci.yml/badge.svg)](https://github.com/ezedeem223/satellite-land-classification-cnn-vit/actions/workflows/ci.yml)
 
-Independent deep learning project for satellite image classification focused on agricultural versus non-agricultural land. The repository consolidates an earlier notebook-driven experimentation workflow into a reproducible codebase with packaged model definitions, configuration files, CLI scripts, tests, CI, and curated historical outputs.
+Independent deep learning project for satellite image classification focused on agricultural versus non-agricultural land. The repository consolidates an earlier experimentation workflow into a reproducible codebase with packaged model definitions, configuration files, CLI scripts, tests, CI, and curated historical outputs.
 
 The current implementation is intentionally described exactly as it exists: a binary remote-sensing classification problem using the class folders `class_0_non_agri` and `class_1_agri`, implemented in both Keras and PyTorch, with CNN baselines and CNN-ViT hybrid models.
 
-Maintained as a curated project archive and reproducible experimentation repository by `ezedeem223`.
+Maintained by Mohamad Sabbagh (`ezedeem223`) as a curated project archive and reproducible experimentation repository.
 
 ![Final comparative confusion matrix](results/confusion_matrix.png)
 
@@ -15,7 +15,7 @@ Maintained as a curated project archive and reproducible experimentation reposit
 - Binary satellite land classification for `agri` versus `non-agri`
 - Framework coverage in both Keras and PyTorch
 - Baseline CNN experiments plus CNN-ViT hybrid experiments
-- Archived development notebooks retained for provenance
+- Preserved experiment notebooks and evaluation records
 - Historical evaluation artifacts preserved under `results/`
 - Config-driven scripts for data preparation, training, evaluation, and prediction
 
@@ -27,19 +27,19 @@ Agricultural remote sensing often begins with practical land-use separation befo
 
 | Phase | Focus | Preserved artifacts |
 |---|---|---|
-| Phase 1 | Dataset inspection, memory-aware loading, augmentation pipelines | Archived loading and augmentation notebooks |
-| Phase 2 | CNN baselines in Keras and PyTorch | Baseline training notebooks and framework comparison outputs |
-| Phase 3 | CNN-backed transformer experiments | Keras and PyTorch CNN-ViT hybrid notebooks |
+| Phase 1 | Dataset inspection, memory-aware loading, augmentation pipelines | Preserved loading and augmentation records |
+| Phase 2 | CNN baselines in Keras and PyTorch | Baseline training records and framework comparison outputs |
+| Phase 3 | CNN-backed transformer experiments | Keras and PyTorch CNN-ViT hybrid experiment records |
 | Phase 4 | Final comparative evaluation | Preserved confusion matrices, ROC curves, reports, and comparison tables |
 
 ## Repository Highlights
 
-- `src/satellite_land_classification/` extracts reusable project logic from the earlier notebook workflow
+- `src/satellite_land_classification/` extracts reusable project logic from the earlier experimentation workflow
 - `scripts/` provides runnable entry points for preparation, training, evaluation, and prediction
 - `configs/` keeps data and model settings explicit
 - `results/` contains curated historical outputs and structured summaries
 - `notebooks/` contains cleaned notebook copies for easier browsing
-- `source_notebooks/` preserves the original development notebooks for traceability
+- `source_notebooks/` preserves the original notebook records for traceability
 
 ## Quick Start
 
@@ -73,7 +73,7 @@ Then run a training script if you want fresh checkpoints, for example:
 python scripts/run_train_pytorch_cnn.py --config configs/pytorch_cnn.yaml --data-config configs/data.yaml
 ```
 
-Evaluation requires local model weights in `models/`, either from your own training runs or from compatible external checkpoints referenced inside the archived notebook workflow.
+Evaluation requires local model weights in `models/`, either from your own training runs or from compatible external checkpoints referenced in the preserved experiment records.
 
 ## Installation
 
@@ -106,7 +106,7 @@ If you prefer `make`, the repository includes:
 
 ## Dataset
 
-The project uses the public `images-dataSAT.tar` archive referenced throughout the archived development notebooks. After extraction, the expected layout is:
+The project uses the public `images-dataSAT.tar` archive referenced throughout the preserved experiment notebooks. After extraction, the expected layout is:
 
 ```text
 data/
@@ -141,7 +141,7 @@ The transformer stage in this repository is not a pure image-to-patch ViT pipeli
 
 The repository keeps two evidence tiers separate:
 
-1. short training runs shown in the archived development notebooks
+1. short training runs shown in the preserved experiment notebooks
 2. later comparison/evaluation runs using pretrained checkpoints
 
 That distinction matters. Some of the strongest scores in the archive come from evaluation notebooks that load pretrained weights rather than only the short local training snapshots.
@@ -206,16 +206,16 @@ Predict a single image:
 python scripts/run_predict.py --model-type pytorch_vit --model-path models/pytorch_cnn_vit_best.pth --image-path path/to/image.jpg
 ```
 
-## Notebook Archive
+## Experiment Archive
 
 The repository keeps two notebook views:
 
 - `notebooks/`
   Curated copies renamed for easier navigation
 - `source_notebooks/`
-  Original development notebooks preserved as a provenance archive
+  Preserved notebook records from earlier project iterations
 
-Some archived notebooks still contain environment-specific setup cells and earlier narrative text because they are being retained as historical artifacts rather than rewritten into new experiments.
+Some preserved notebooks still contain environment-specific setup cells and period-specific narrative context because they are being retained as historical records rather than rewritten into new experiments.
 
 ## Project Structure
 
@@ -243,7 +243,7 @@ satellite-land-classification-cnn-vit/
 
 ## Future Work
 
-- Add checkpoint download helpers for the externally referenced archived weights
+- Add checkpoint download helpers for the externally referenced evaluation weights
 - Add experiment tracking for fresh reruns
 - Extend the dataset/task scope to richer land-cover categories
 - Add geospatial metadata-aware workflows and explainability overlays

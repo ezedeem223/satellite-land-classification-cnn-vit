@@ -2,14 +2,14 @@
 
 This folder mixes three artifact types, and the distinction matters:
 
-1. Historical notebook outputs extracted from the archived development notebooks
+1. Historical notebook outputs extracted from preserved experiment notebooks
 2. Structured summaries derived from those notebook outputs
 3. Placeholder locations for future reruns from the refactored scripts
 
 Included now:
 
 - `metrics.json`
-  Historical metrics extracted from the archived CNN comparison, hybrid training, and final evaluation notebooks
+  Historical metrics extracted from the preserved CNN comparison, hybrid training, and final evaluation notebooks
 - `model_comparison.csv`
   Comparison table built only from notebook-supported metrics
 - `classification_report.txt`

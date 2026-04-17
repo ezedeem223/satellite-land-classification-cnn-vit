@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [
-  { name = "ezedeem223" }
+  { name = "Mohamad Sabbagh" }
 ]
 maintainers = [
-  { name = "ezedeem223" }
+  { name = "Mohamad Sabbagh" }
 ]
 dependencies = [
   "numpy>=1.26,<2.2",

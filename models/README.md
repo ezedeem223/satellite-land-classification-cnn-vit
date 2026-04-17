@@ -9,9 +9,9 @@ Expected checkpoint outputs from the refactored scripts:
 - `models/keras_cnn_vit_best.keras`
 - `models/pytorch_cnn_vit_best.pth`
 
-Important context from the archived experiment workflow:
+Important context from the preserved experiment record:
 
-- The archived framework-comparison notebooks rely on external pretrained checkpoints in addition to the short local training runs.
+- The preserved framework-comparison notebooks rely on external pretrained checkpoints in addition to the short local training runs.
 - Those binaries are not bundled here.
 - To reproduce the preserved evaluation outputs, either:
   - train compatible checkpoints locally with the scripts in this repository, or
