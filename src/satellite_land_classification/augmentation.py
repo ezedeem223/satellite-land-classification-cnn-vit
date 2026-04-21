@@ -14,7 +14,7 @@ def custom_keras_data_generator(
     batch_size: int,
     target_size: tuple[int, int] = (64, 64),
 ):
-    """Yield batches of resized image tensors and labels like the Module 1 notebook."""
+    """Yield batches of resized image tensors and labels for the preserved loading workflow."""
 
     paths = list(image_paths)
     label_list = list(labels)
@@ -30,7 +30,7 @@ def custom_keras_data_generator(
 
 
 def keras_datagen_kwargs(validation_split: float = 0.2) -> dict[str, float | bool | str]:
-    """Return the augmentation settings used in the Keras notebooks."""
+    """Return the augmentation settings used in the preserved Keras experiments."""
 
     return {
         "rescale": 1.0 / 255.0,
@@ -46,6 +46,6 @@ def keras_datagen_kwargs(validation_split: float = 0.2) -> dict[str, float | boo
 
 
 def pytorch_normalization() -> tuple[list[float], list[float]]:
-    """Return the ImageNet normalization used in the PyTorch notebooks."""
+    """Return the ImageNet normalization used in the preserved PyTorch experiments."""
 
     return [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]

@@ -10,3 +10,5 @@ The copies here were intentionally left close to their earlier working form. The
 - environment-specific setup cells and preserved instruction cells
 
 Use `notebooks/` for the curated notebook view and `source_notebooks/` when you want to inspect the earlier working records exactly as they were preserved.
+
+These preserved notebook records are excluded from GitHub Linguist language classification because they support traceability, not the maintained Python runtime surface.

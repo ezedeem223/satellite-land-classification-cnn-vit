@@ -13,7 +13,7 @@ from .utils import AssetNotFoundError, ensure_dir, require_path
 
 @tf.keras.utils.register_keras_serializable(package="Custom")
 class AddPositionEmbedding(layers.Layer):
-    """Learnable positional embedding used in the Keras hybrid notebook."""
+    """Learnable positional embedding used in the Keras hybrid experiment."""
 
     def __init__(self, num_patches: int, embed_dim: int, **kwargs):
         super().__init__(**kwargs)
@@ -37,7 +37,7 @@ class AddPositionEmbedding(layers.Layer):
 
 @tf.keras.utils.register_keras_serializable(package="Custom")
 class TransformerBlock(layers.Layer):
-    """Transformer encoder block used in the Keras hybrid notebook."""
+    """Transformer encoder block used in the Keras hybrid experiment."""
 
     def __init__(
         self,
@@ -89,7 +89,7 @@ def build_cnn_vit_hybrid(
     mlp_dim: int = 2048,
     num_classes: int = 2,
 ):
-    """Build the Keras CNN-ViT hybrid used in Module 3."""
+    """Build the Keras CNN-ViT hybrid used in the preserved Keras experiments."""
 
     cnn_model.trainable = False
     features = cnn_model.get_layer(feature_layer_name).output
@@ -130,14 +130,14 @@ def train_keras_cnn_vit(
     attention_heads: int = 8,
     mlp_dim: int = 2048,
 ) -> dict[str, list[float]]:
-    """Train the Keras CNN-ViT hybrid following Module 3."""
+    """Train the Keras CNN-ViT hybrid using the preserved hybrid setup."""
 
     root = validate_dataset_dir(dataset_dir)
     cnn_path = Path(pretrained_cnn_path)
     if not cnn_path.exists():
         raise AssetNotFoundError(
             f"Pretrained Keras CNN backbone not found at {cnn_path}. "
-            "Train Module 2 first or provide the downloaded course checkpoint."
+            "Train the baseline Keras CNN first or provide a compatible pretrained checkpoint."
         )
     model_path = Path(output_model_path)
     ensure_dir(model_path.parent)

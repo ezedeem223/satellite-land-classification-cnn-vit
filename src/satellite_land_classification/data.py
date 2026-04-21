@@ -59,7 +59,7 @@ def prepare_dataset(
     extracted_dir: str | Path | None = None,
     overwrite: bool = False,
 ) -> Path:
-    """Download and extract the course dataset to the requested location."""
+    """Download and extract the public dataset archive to the requested location."""
 
     root = ensure_dir(root_dir)
     archive_path = root / archive_name
@@ -79,7 +79,7 @@ def iter_image_files(dataset_dir: str | Path) -> Iterator[Path]:
 
 
 def build_image_index(dataset_dir: str | Path) -> list[tuple[Path, int]]:
-    """Build a list of (path, label) pairs aligned with the notebook folder naming."""
+    """Build a list of (path, label) pairs aligned with the dataset folder naming."""
 
     root = validate_dataset_dir(dataset_dir)
     index: list[tuple[Path, int]] = []

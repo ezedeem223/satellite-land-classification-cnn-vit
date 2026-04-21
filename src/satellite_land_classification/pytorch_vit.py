@@ -12,7 +12,7 @@ from .utils import AssetNotFoundError, ensure_dir
 
 
 class ConvNet(nn.Module):
-    """CNN backbone matching the PyTorch notebook implementation."""
+    """CNN backbone matching the preserved PyTorch baseline implementation."""
 
     def __init__(self, num_classes: int):
         super().__init__()
@@ -73,7 +73,7 @@ class PatchEmbed(nn.Module):
 
 
 class MHSA(nn.Module):
-    """Multi-head self-attention from the notebook."""
+    """Multi-head self-attention block used in the preserved hybrid model."""
 
     def __init__(self, dim: int, heads: int = 8, dropout: float = 0.0):
         super().__init__()
@@ -97,7 +97,7 @@ class MHSA(nn.Module):
 
 
 class TransformerBlock(nn.Module):
-    """Transformer encoder block from the notebook."""
+    """Transformer encoder block used in the preserved hybrid model."""
 
     def __init__(self, dim: int, heads: int, mlp_ratio: float = 4.0, dropout: float = 0.0):
         super().__init__()
@@ -119,7 +119,7 @@ class TransformerBlock(nn.Module):
 
 
 class ViT(nn.Module):
-    """Vision Transformer head used in the PyTorch hybrid notebook."""
+    """Transformer head used in the PyTorch CNN-ViT hybrid model."""
 
     def __init__(
         self,
@@ -154,7 +154,7 @@ class ViT(nn.Module):
 
 
 class CNNViTHybrid(nn.Module):
-    """CNN-ViT hybrid model matching the PyTorch notebook."""
+    """CNN-ViT hybrid model matching the preserved PyTorch implementation."""
 
     def __init__(self, num_classes: int = 2, embed_dim: int = 768, depth: int = 3, heads: int = 6):
         super().__init__()
@@ -173,7 +173,7 @@ def create_pytorch_vit_dataloaders(
     seed: int = 7331,
     num_workers: int = 0,
 ):
-    """Create the dataloaders used in the PyTorch hybrid notebook."""
+    """Create the dataloaders used in the preserved PyTorch hybrid workflow."""
 
     root = validate_dataset_dir(dataset_dir)
     means, stds = pytorch_normalization()
@@ -280,7 +280,7 @@ def train_pytorch_cnn_vit(
     if not cnn_path.exists():
         raise AssetNotFoundError(
             f"Pretrained PyTorch CNN backbone not found at {cnn_path}. "
-            "Train Module 2 first or provide the downloaded course state dict."
+            "Train the baseline PyTorch CNN first or provide a compatible pretrained state dict."
         )
     model_path = Path(output_model_path)
     ensure_dir(model_path.parent)

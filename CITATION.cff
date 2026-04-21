@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "Satellite Agricultural Land Classification with CNNs and CNN-ViT Models"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - given-names: "Mohamad"
+    family-names: "Sabbagh"
+version: "1.0.0"
+date-released: 2026-04-21
+license: "MIT"
+repository-code: "https://github.com/ezedeem223/satellite-land-classification-cnn-vit"
+url: "https://github.com/ezedeem223/satellite-land-classification-cnn-vit"

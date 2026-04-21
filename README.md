@@ -6,7 +6,7 @@ Independent deep learning project for satellite image classification focused on 
 
 The current implementation is intentionally described exactly as it exists: a binary remote-sensing classification problem using the class folders `class_0_non_agri` and `class_1_agri`, implemented in both Keras and PyTorch, with CNN baselines and CNN-ViT hybrid models.
 
-Maintained by Mohamad Sabbagh (`ezedeem223`) as a curated project archive and reproducible experimentation repository.
+Maintained by Mohamad Sabbagh (`ezedeem223`) as a Python-first research and experimentation repository.
 
 ![Final comparative confusion matrix](results/confusion_matrix.png)
 
@@ -15,9 +15,9 @@ Maintained by Mohamad Sabbagh (`ezedeem223`) as a curated project archive and re
 - Binary satellite land classification for `agri` versus `non-agri`
 - Framework coverage in both Keras and PyTorch
 - Baseline CNN experiments plus CNN-ViT hybrid experiments
-- Preserved experiment notebooks and evaluation records
+- Packaged Python source, runnable scripts, and explicit configs
 - Historical evaluation artifacts preserved under `results/`
-- Config-driven scripts for data preparation, training, evaluation, and prediction
+- Preserved experiment notebooks retained as supporting provenance material
 
 ## Why This Project Matters
 
@@ -34,12 +34,12 @@ Agricultural remote sensing often begins with practical land-use separation befo
 
 ## Repository Highlights
 
-- `src/satellite_land_classification/` extracts reusable project logic from the earlier experimentation workflow
+- `src/satellite_land_classification/` provides the maintained package surface for configuration, data handling, training, evaluation, and prediction
 - `scripts/` provides runnable entry points for preparation, training, evaluation, and prediction
 - `configs/` keeps data and model settings explicit
 - `results/` contains curated historical outputs and structured summaries
-- `notebooks/` contains cleaned notebook copies for easier browsing
-- `source_notebooks/` preserves the original notebook records for traceability
+- `notebooks/` contains cleaned experiment notebooks for reference
+- `source_notebooks/` preserves original notebook records for traceability
 
 ## Quick Start
 
@@ -73,7 +73,7 @@ Then run a training script if you want fresh checkpoints, for example:
 python scripts/run_train_pytorch_cnn.py --config configs/pytorch_cnn.yaml --data-config configs/data.yaml
 ```
 
-Evaluation requires local model weights in `models/`, either from your own training runs or from compatible external checkpoints referenced in the preserved experiment records.
+Evaluation and prediction require local model weights in `models/`, either from your own training runs or from compatible external checkpoints referenced in the preserved experiment records.
 
 ## Installation
 
@@ -104,9 +104,23 @@ If you prefer `make`, the repository includes:
 - `make train-pytorch-vit`
 - `make evaluate`
 
+## Python API
+
+After installing the package and placing the dataset locally, the same configuration and validation utilities used by the CLI scripts are available directly from Python:
+
+```python
+from satellite_land_classification import load_config
+from satellite_land_classification.data import validate_dataset_dir
+
+config = load_config("configs/data.yaml")
+dataset_dir = validate_dataset_dir(config["dataset"]["root_dir"])
+
+print(dataset_dir)
+```
+
 ## Dataset
 
-The project uses the public `images-dataSAT.tar` archive referenced throughout the preserved experiment notebooks. After extraction, the expected layout is:
+The project uses the public `images-dataSAT.tar` archive referenced throughout the preserved experiment records. After extraction, the expected layout is:
 
 ```text
 data/
@@ -144,7 +158,7 @@ The repository keeps two evidence tiers separate:
 1. short training runs shown in the preserved experiment notebooks
 2. later comparison/evaluation runs using pretrained checkpoints
 
-That distinction matters. Some of the strongest scores in the archive come from evaluation notebooks that load pretrained weights rather than only the short local training snapshots.
+That distinction matters. Some of the strongest scores in the preserved records come from evaluation notebooks that load pretrained weights rather than only the short local training snapshots.
 
 ### Preserved comparison metrics
 
@@ -251,4 +265,4 @@ satellite-land-classification-cnn-vit/
 
 ## License
 
-See [LICENSE](LICENSE). The refactored project code and documentation are released under MIT. Archived notebook materials retain their original attribution and embedded notices.
+See [LICENSE](LICENSE). The maintained project code and documentation are released under MIT. Preserved notebook materials retain their original attribution and embedded notices.

@@ -16,7 +16,7 @@ def _torch():
 
 
 def build_pytorch_cnn(num_classes: int = 2):
-    """Build the PyTorch CNN architecture used in Module 2."""
+    """Build the PyTorch CNN baseline used in the project."""
 
     _, nn, _, _ = _torch()
     return nn.Sequential(
@@ -62,7 +62,7 @@ def create_pytorch_dataloaders(
     seed: int = 7331,
     num_workers: int = 0,
 ):
-    """Create PyTorch train/validation dataloaders with notebook-aligned transforms."""
+    """Create PyTorch train/validation dataloaders with the preserved training transforms."""
 
     torch, _, datasets, transforms = _torch()
     root = validate_dataset_dir(dataset_dir)

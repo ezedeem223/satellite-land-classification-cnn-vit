@@ -14,7 +14,7 @@ def _tf():
 
 
 def build_keras_cnn(image_size: tuple[int, int] = (64, 64), channels: int = 3):
-    """Build the CNN architecture used in Module 2 Keras."""
+    """Build the Keras CNN baseline used in the project."""
 
     tf = _tf()
     layers = tf.keras.layers
@@ -131,7 +131,7 @@ def create_keras_generators(
     batch_size: int,
     validation_split: float = 0.2,
 ):
-    """Create training and validation generators matching the notebook settings."""
+    """Create training and validation generators matching the preserved training setup."""
 
     tf = _tf()
     root = validate_dataset_dir(dataset_dir)

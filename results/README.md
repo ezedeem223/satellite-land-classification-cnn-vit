@@ -28,3 +28,5 @@ Not included yet:
 - Newly trained checkpoints
 
 Those missing artifacts are intentional. The repository preserves real historical outputs, but the dataset and model binaries are not committed here, so fresh reruns depend on local setup.
+
+The `preserved_notebook_outputs/` subtree is retained for traceability, but it is excluded from GitHub Linguist language classification because it does not represent the maintained runtime surface of the project.

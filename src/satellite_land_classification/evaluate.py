@@ -27,7 +27,7 @@ def compute_binary_metrics(
     y_prob: list[float] | np.ndarray,
     label_names: list[str] | tuple[str, str],
 ) -> dict[str, Any]:
-    """Compute the binary classification metrics used in the notebooks."""
+    """Compute the binary classification metrics used throughout the project."""
 
     y_true_arr = np.asarray(y_true)
     y_pred_arr = np.asarray(y_pred)
