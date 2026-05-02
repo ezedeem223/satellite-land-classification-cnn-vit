@@ -176,6 +176,25 @@ Structured copies of these artifacts live in:
 - [results/classification_report.txt](results/classification_report.txt)
 - [results/preserved_notebook_outputs/](results/preserved_notebook_outputs/)
 
+## Research Evidence Pack
+
+The `docs/research_pack/` directory contains a structured evidence, documentation,
+and reproducibility pack for this repository.
+
+- **[PROJECT_BRIEF_KAUST.md](docs/research_pack/PROJECT_BRIEF_KAUST.md)** — Concise academic brief oriented toward KAUST research context
+- **[MODEL_COMPARISON_BRIEF.md](docs/research_pack/MODEL_COMPARISON_BRIEF.md)** — Side-by-side comparison of preserved metrics for all four model variants
+- **[METRIC_PROVENANCE_MATRIX.md](docs/research_pack/METRIC_PROVENANCE_MATRIX.md)** — Traceability table linking every metric to its source artifact
+- **[EXPERIMENT_LIMITATION_MATRIX.md](docs/research_pack/EXPERIMENT_LIMITATION_MATRIX.md)** — Structured disclosure of experimental limitations and reviewer risks
+- **[CNN_VS_CNN_VIT_EXPLAINER.md](docs/research_pack/CNN_VS_CNN_VIT_EXPLAINER.md)** — Accessible academic explainer on the CNN vs CNN-ViT hybrid design
+- **[DATASET_AND_TASK_CARD.md](docs/research_pack/DATASET_AND_TASK_CARD.md)** — Dataset and task card documenting scope, layout, and boundaries
+- **[EXPLAINABILITY_PROTOCOL.md](docs/research_pack/EXPLAINABILITY_PROTOCOL.md)** — Protocol for future explainability work; no maps generated in this pass
+
+Run the evidence validation tool:
+
+```bash
+python tools/evidence/validate_research_pack.py
+```
+
 ## Usage
 
 Prepare data:
