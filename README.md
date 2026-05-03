@@ -181,7 +181,7 @@ Structured copies of these artifacts live in:
 The `docs/research_pack/` directory contains a structured evidence, documentation,
 and reproducibility pack for this repository.
 
-- **[PROJECT_BRIEF_KAUST.md](docs/research_pack/PROJECT_BRIEF_KAUST.md)** — Concise academic brief oriented toward KAUST research context
+- **[ACADEMIC_RESEARCH_BRIEF.md](docs/research_pack/ACADEMIC_RESEARCH_BRIEF.md)** — Concise academic research brief
 - **[MODEL_COMPARISON_BRIEF.md](docs/research_pack/MODEL_COMPARISON_BRIEF.md)** — Side-by-side comparison of preserved metrics for all four model variants
 - **[METRIC_PROVENANCE_MATRIX.md](docs/research_pack/METRIC_PROVENANCE_MATRIX.md)** — Traceability table linking every metric to its source artifact
 - **[EXPERIMENT_LIMITATION_MATRIX.md](docs/research_pack/EXPERIMENT_LIMITATION_MATRIX.md)** — Structured disclosure of experimental limitations and reviewer risks

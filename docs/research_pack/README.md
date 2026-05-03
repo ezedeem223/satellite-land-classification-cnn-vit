@@ -1,8 +1,8 @@
 # Satellite Research Evidence Pack
 
 This directory is a curated evidence, documentation, and reproducibility pack for the
-`satellite-land-classification-cnn-vit` research repository. It is part of the
-KAUST AI research portfolio.
+`satellite-land-classification-cnn-vit` research repository. It is part of an
+academic AI research portfolio.
 
 ## Purpose
 
@@ -15,7 +15,7 @@ explainability outputs.
 
 | File | Description |
 |---|---|
-| `PROJECT_BRIEF_KAUST.md` | Concise academic brief oriented toward KAUST research context |
+| `ACADEMIC_RESEARCH_BRIEF.md` | Concise academic research brief |
 | `MODEL_COMPARISON_BRIEF.md` | Side-by-side comparison of preserved metrics for all four model variants |
 | `METRIC_PROVENANCE_MATRIX.md` | Traceability table linking every metric to its source artifact |
 | `EXPERIMENT_LIMITATION_MATRIX.md` | Structured disclosure of experimental limitations and reviewer risks |
