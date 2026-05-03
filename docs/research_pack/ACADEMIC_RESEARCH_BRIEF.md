@@ -1,4 +1,4 @@
-# Project Brief — KAUST AI Research Portfolio
+# Academic Research Brief
 
 ## Title
 
@@ -135,7 +135,7 @@ Source artifacts: `results/metrics.json`, `results/model_comparison.csv`,
 
 ---
 
-## Future KAUST-Style Research Directions
+## Future Research Directions
 
 - Extend to multi-class land-cover classification using a richer geospatial dataset
 - Integrate geospatial metadata (coordinate bounds, acquisition timestamps, sensor

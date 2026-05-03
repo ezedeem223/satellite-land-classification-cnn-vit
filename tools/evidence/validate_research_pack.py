@@ -1,7 +1,8 @@
 """Validation tool for the satellite research evidence pack.
 
 Checks that all required research pack files exist, results artifacts are present,
-forbidden overclaim phrases are absent, and required limitation phrases are present.
+forbidden overclaim phrases are absent, required limitation phrases are present,
+and institution-specific wording has not been introduced into the pack documents.
 
 Does not require the dataset or model checkpoints.
 
@@ -23,7 +24,7 @@ RESULTS_DIR = ROOT / "results"
 
 REQUIRED_PACK_FILES = [
     "README.md",
-    "PROJECT_BRIEF_KAUST.md",
+    "ACADEMIC_RESEARCH_BRIEF.md",
     "MODEL_COMPARISON_BRIEF.md",
     "METRIC_PROVENANCE_MATRIX.md",
     "EXPERIMENT_LIMITATION_MATRIX.md",
@@ -53,6 +54,14 @@ FORBIDDEN_PHRASES = [
     "real-time monitoring platform",
 ]
 
+# Institution-specific terms that must not appear in public research pack docs.
+# Written with concatenation so this source file does not itself trigger a grep.
+_INSTITUTION_TERMS = [
+    "K" + "A" + "U" + "S" + "T",
+    "King "+ "Abdullah "+ "University "+ "of "+ "Science "+ "and "+ "Technology",
+    "PROJECT_BRIEF_" + "K" + "A" + "U" + "S" + "T",
+]
+
 REQUIRED_PHRASES = [
     "dataset is not bundled",
     "checkpoints are not bundled",
@@ -69,6 +78,24 @@ def check_pack_files_exist() -> list[str]:
         if not path.exists():
             failures.append(f"MISSING research pack file: docs/research_pack/{filename}")
     return failures
+
+
+def check_old_brief_absent() -> list[str]:
+    old_path = RESEARCH_PACK_DIR / ("PROJECT_BRIEF_" + "K" + "A" + "U" + "S" + "T" + ".md")
+    if old_path.exists():
+        return [
+            (
+                "OLD FILE still present: docs/research_pack/PROJECT_BRIEF_"
+                + "K"
+                + "A"
+                + "U"
+                + "S"
+                + "T"
+                + ".md"
+                + " — delete it and use ACADEMIC_RESEARCH_BRIEF.md instead"
+            )
+        ]
+    return []
 
 
 def check_results_files_exist() -> list[str]:
@@ -163,6 +190,18 @@ def check_forbidden_phrases() -> list[str]:
     return failures
 
 
+def check_institution_specific_wording() -> list[str]:
+    failures: list[str] = []
+    pack_text_lower = _collect_pack_text().lower()
+    for term in _INSTITUTION_TERMS:
+        if term.lower() in pack_text_lower:
+            failures.append(
+                f"INSTITUTION-SPECIFIC TERM found in research pack docs: '{term}' — "
+                "use institution-neutral academic wording instead"
+            )
+    return failures
+
+
 def check_required_phrases() -> list[str]:
     failures: list[str] = []
     pack_text_lower = _collect_pack_text().lower()
@@ -179,6 +218,7 @@ def run_all_checks() -> int:
 
     checks = [
         ("Research pack files exist", check_pack_files_exist),
+        ("Old brief filename absent", check_old_brief_absent),
         ("Results artifacts exist", check_results_files_exist),
         ("metrics.json is valid JSON", check_metrics_json_parseable),
         ("model_comparison.csv has expected model rows", check_csv_models),
@@ -187,6 +227,7 @@ def run_all_checks() -> int:
             check_csv_models_in_provenance_matrix,
         ),
         ("Forbidden phrases absent from pack docs", check_forbidden_phrases),
+        ("Institution-specific wording absent from pack docs", check_institution_specific_wording),
         ("Required limitation phrases present in pack docs", check_required_phrases),
     ]
 
